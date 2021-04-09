@@ -11,17 +11,17 @@ class ThemeService {
 
   RxValue<bool> valueSwitch = RxValue<bool>(true);
 
-  RxValue<ThemeData?> appTheme = RxValue<ThemeData?>(xuluLightTheme());
+  RxValue<ThemeData?> appTheme = RxValue<ThemeData?>(lightTheme());
 
   void setAppTheme(bool param) {
     if (param) {
       if (!valueSwitch.value) {
-        appTheme.value = xuluLightTheme();
+        appTheme.value = lightTheme();
         valueSwitch.value = true;
       }
     } else {
       if (valueSwitch.value) {
-        appTheme.value = xuluDarkTheme();
+        appTheme.value = darkTheme();
         valueSwitch.value = false;
       }
     }

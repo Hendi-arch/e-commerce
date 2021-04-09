@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:e_commerce/ui/themes/app_colors.dart';
+import 'package:e_commerce/ui/themes/colors/app_colors.dart';
 import '../../../app/app.locator.dart';
 import '../../../shared/size_config.dart';
 
@@ -8,7 +8,7 @@ class CustomCircle extends StatelessWidget {
   final double width;
   final double height;
 
-  CustomCircle({Key? key, this.width = 320.21, this.height = 320.21, this.color = kCircleColor}) : super(key: key);
+  CustomCircle({Key? key, this.width = 320.21, this.height = 320.21, this.color = kSuccess}) : super(key: key);
 
   final SizeConfig? _sizeConfig = locator<SizeConfig>();
 
