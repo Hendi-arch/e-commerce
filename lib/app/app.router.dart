@@ -6,7 +6,6 @@
 
 // ignore_for_file: public_member_api_docs
 
-import 'package:flutter/cupertino.dart';
 import 'package:stacked/stacked.dart';
 
 import '../ui/views/startup/start_up_view.dart';
@@ -28,7 +27,7 @@ class StackedRouter extends RouterBase {
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, StackedRouteFactory>{
     StartUpView: (data) {
-      return CupertinoPageRoute<dynamic>(
+      return buildAdaptivePageRoute<dynamic>(
         builder: (context) => StartUpView(),
         settings: data,
       );

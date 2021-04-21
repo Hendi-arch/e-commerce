@@ -16,6 +16,7 @@ import '../core/services/theme_service.dart';
 import '../core/services/utility_service.dart';
 import '../shared/asset_path.dart';
 import '../shared/size_config.dart';
+import '../shared/svgs.dart';
 
 final locator = StackedLocator.instance;
 
@@ -28,5 +29,6 @@ void setupLocator() {
   locator.registerLazySingleton(() => Api());
   locator.registerLazySingleton(() => SizeConfig());
   locator.registerLazySingleton(() => ThemeService());
+  locator.registerLazySingleton(() => SVGs());
   locator.registerFactory(() => ApiService());
 }

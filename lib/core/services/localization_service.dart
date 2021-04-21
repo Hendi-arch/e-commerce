@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
-import 'package:observable_ish/value/value.dart';
 import 'package:stacked/stacked.dart';
 import 'package:basic_services/basic_services.dart';
 import 'package:e_commerce/app/app.locator.dart';
@@ -24,9 +23,9 @@ class LocalizationService with ReactiveServiceMixin {
     listenToReactiveValues([_localizationModel, _currentLocaleName]);
   }
 
-  RxValue<String?> _currentLocaleName = RxValue<String?>('');
+  ReactiveValue<String?> _currentLocaleName = ReactiveValue<String?>('');
 
-  RxValue<LocalizationModel> _localizationModel = RxValue<LocalizationModel>(LocalizationModel());
+  ReactiveValue<LocalizationModel> _localizationModel = ReactiveValue<LocalizationModel>(LocalizationModel());
 
   String? get currentLocaleName => _currentLocaleName.value;
 

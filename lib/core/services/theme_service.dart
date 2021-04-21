@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:e_commerce/app/app.locator.dart';
 import 'package:e_commerce/core/constant/constant.dart';
 import 'package:e_commerce/ui/themes/app_themes.dart';
-import 'package:observable_ish/observable_ish.dart';
 import 'package:basic_services/basic_services.dart';
+import 'package:stacked/stacked.dart';
 
 class ThemeService {
   // services
   final SharedPreferencesService _sharedPreferencesService = locator<SharedPreferencesService>();
 
-  RxValue<bool> valueSwitch = RxValue<bool>(true);
+  ReactiveValue<bool> valueSwitch = ReactiveValue<bool>(true);
 
-  RxValue<ThemeData?> appTheme = RxValue<ThemeData?>(lightTheme());
+  ReactiveValue<ThemeData?> appTheme = ReactiveValue<ThemeData?>(lightTheme());
 
   void setAppTheme(bool param) {
     if (param) {

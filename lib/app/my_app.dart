@@ -26,6 +26,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         theme: _themesServices!.appTheme.value,
         navigatorKey: StackedService.navigatorKey,
+        navigatorObservers: [StackedService.routeObserver],
         onGenerateRoute: (RouteSettings settings) => StackedRouter().onGenerateRoute(settings),
         builder: (context, child) =>
             MediaQuery(child: child!, data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0)));

@@ -1,3 +1,4 @@
+import 'package:e_commerce/shared/svgs.dart';
 import 'package:stacked/stacked_annotations.dart';
 
 // route name
@@ -19,7 +20,7 @@ import 'package:e_commerce/shared/size_config.dart';
 import 'package:e_commerce/ui/views/startup/start_up_view.dart';
 
 @StackedApp(routes: [
-  CupertinoRoute(page: StartUpView, initial: true, path: root),
+  AdaptiveRoute(page: StartUpView, initial: true, path: root),
 ], dependencies: [
   // Singleton Injections
   LazySingleton(classType: DialogService),
@@ -30,6 +31,7 @@ import 'package:e_commerce/ui/views/startup/start_up_view.dart';
   LazySingleton(classType: Api),
   LazySingleton(classType: SizeConfig),
   LazySingleton(classType: ThemeService),
+  LazySingleton(classType: SVGs),
 
   // Factory Injections
   Factory(classType: ApiService)
