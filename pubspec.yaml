@@ -17,7 +17,7 @@ dependencies:
   intl: ^0.17.0
 
   # state management ( null safety )
-  stacked: ^2.1.0
+  stacked: ^2.1.1
 
   # http request handling ( null safety )
   dio: ^4.0.0
@@ -29,13 +29,13 @@ dependencies:
   path_provider: ^2.0.1
 
   # load local image ( null safety )
-  flutter_svg: ^0.21.0+1
+  flutter_svg: ^0.22.0
 
   # local repo packages ( null safety )
   basic_services: # bundle of services
     git:
       url: https://github.com/Hendi-arch/basic_services.git
-      ref: 65a334641b7b4d06ef569a8a464d1d3bb059cb6b
+      ref: a8ec91fa9dd3208cff3a52801b36e88e219000dd
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +65,12 @@ flutter:
   fonts:
     - family: Metropolis
       fonts:
-        - asset: assets/fonts/
+        - asset: assets/fonts/Metropolis-Bold.otf
+        - asset: assets/fonts/Metropolis-Light.otf
+        - asset: assets/fonts/Metropolis-Medium.otf
+        - asset: assets/fonts/Metropolis-Regular.otf
+        - asset: assets/fonts/Metropolis-SemiBold.otf
+        - asset: assets/fonts/Metropolis-Thin.otf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
