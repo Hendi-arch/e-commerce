@@ -17,7 +17,7 @@ dependencies:
   intl: ^0.17.0
 
   # state management ( null safety )
-  stacked: ^2.1.1
+  stacked: ^2.1.6
 
   # http request handling ( null safety )
   dio: ^4.0.0
@@ -35,7 +35,7 @@ dependencies:
   basic_services: # bundle of services
     git:
       url: https://github.com/Hendi-arch/basic_services.git
-      ref: a8ec91fa9dd3208cff3a52801b36e88e219000dd
+      ref: 43cb7a834b0c24d8f84e3f4d39c67486dd08cf98
 
 dev_dependencies:
   flutter_test:
@@ -54,7 +54,7 @@ flutter:
 
   assets:
     - assets/json/
-    - assets/svg/
+    - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
