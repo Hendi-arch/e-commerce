@@ -6,15 +6,15 @@ ThemeData darkTheme() {
   final ThemeData base = ThemeData.dark();
   return base.copyWith(
     cardTheme: darkCardTheme,
-    textTheme: appTextTheme(),
     dialogTheme: darkDialogTheme,
     colorScheme: darkColorScheme,
-    accentTextTheme: appTextTheme(),
-    primaryTextTheme: appTextTheme(),
     switchTheme: darkSwitchThemeData,
     accentColor: darkColorScheme.primary,
     primaryColor: darkColorScheme.primary,
+    textTheme: appTextTheme(isLight: false),
     backgroundColor: darkColorScheme.background,
+    accentTextTheme: appTextTheme(isLight: false),
+    primaryTextTheme: appTextTheme(isLight: false),
     textSelectionTheme: darkTextSelectionThemeData,
     inputDecorationTheme: darkInputDecorationTheme,
     elevatedButtonTheme: darkElevatedButtonThemeData,
@@ -44,8 +44,9 @@ ThemeData lightTheme() {
   );
 }
 
-TextTheme appTextTheme() {
-  final base = ThemeData().textTheme;
+TextTheme appTextTheme({bool isLight = true}) {
+  late TextTheme base;
+  base = isLight ? ThemeData.light().textTheme : ThemeData.dark().textTheme;
   return base
       .copyWith(
           headline4: base.headline4!.copyWith(fontSize: 34),

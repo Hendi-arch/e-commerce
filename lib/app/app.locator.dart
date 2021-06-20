@@ -8,27 +8,29 @@
 
 import 'package:basic_services/basic_services.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked/stacked_annotations.dart';
 
 import '../core/api/api.dart';
 import '../core/services/api_service.dart';
 import '../core/services/localization_service.dart';
 import '../core/services/theme_service.dart';
 import '../core/services/utility_service.dart';
-import '../shared/asset_path.dart';
 import '../shared/size_config.dart';
-import '../shared/svgs.dart';
 
 final locator = StackedLocator.instance;
 
-void setupLocator() {
+void setupLocator({String? environment, EnvironmentFilter? environmentFilter}) {
+// Register environments
+  locator.registerEnvironment(
+      environment: environment, environmentFilter: environmentFilter);
+
+// Register dependencies
   locator.registerLazySingleton(() => DialogService());
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => UtilityService());
   locator.registerLazySingleton(() => LocalizationService());
-  locator.registerLazySingleton(() => AssetPath());
   locator.registerLazySingleton(() => Api());
   locator.registerLazySingleton(() => SizeConfig());
   locator.registerLazySingleton(() => ThemeService());
-  locator.registerLazySingleton(() => SVGs());
   locator.registerFactory(() => ApiService());
 }

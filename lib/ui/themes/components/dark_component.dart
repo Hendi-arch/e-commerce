@@ -20,9 +20,9 @@ final DialogTheme darkDialogTheme = DialogTheme(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)), backgroundColor: darkColorScheme.surface);
 
 final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
-    labelStyle: appTextTheme().overline!.apply(color: kGrayDark),
-    hintStyle: appTextTheme().bodyText1!.apply(color: kGrayDark),
-    helperStyle: appTextTheme().overline!.apply(color: kGrayDark),
+    labelStyle: appTextTheme(isLight: false).overline!.apply(color: kGrayDark),
+    hintStyle: appTextTheme(isLight: false).bodyText1!.apply(color: kGrayDark),
+    helperStyle: appTextTheme(isLight: false).overline!.apply(color: kGrayDark),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
     contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),

@@ -15,7 +15,6 @@ import 'package:e_commerce/shared/asset_path.dart';
 class LocalizationService with ReactiveServiceMixin {
   final Api? _api = locator<Api>();
   final UtilityService? _utility = locator<UtilityService>();
-  final AssetPath? _assetPath = locator<AssetPath>();
   final ApiService? _apiService = locator<ApiService>();
   final SharedPreferencesService? _sharedPrefsService = locator<SharedPreferencesService>();
 
@@ -83,7 +82,7 @@ class LocalizationService with ReactiveServiceMixin {
             });
           } else {
             _localizationModel.value = LocalizationModel.fromJson(
-                jsonDecode(await rootBundle.loadString('${_assetPath!.jsonPath}$IdLocale.json')));
+                jsonDecode(await rootBundle.loadString('${AssetPath.jsonPath}$IdLocale.json')));
             _currentLocaleName.value = 'Indonesia';
 
             _sharedPrefsService!.saveToDisk(currentLocale, 'id');
@@ -92,7 +91,7 @@ class LocalizationService with ReactiveServiceMixin {
       }
     } catch (e) {
       _localizationModel.value =
-          LocalizationModel.fromJson(jsonDecode(await rootBundle.loadString('${_assetPath!.jsonPath}$IdLocale.json')));
+          LocalizationModel.fromJson(jsonDecode(await rootBundle.loadString('${AssetPath.jsonPath}$IdLocale.json')));
       _currentLocaleName.value = 'Indonesia';
 
       _sharedPrefsService!.removeKey(currentLocale);

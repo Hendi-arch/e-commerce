@@ -17,7 +17,7 @@ dependencies:
   intl: ^0.17.0
 
   # state management ( null safety )
-  stacked: ^2.1.6
+  stacked: ^2.1.9
 
   # http request handling ( null safety )
   dio: ^4.0.0
@@ -26,7 +26,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   # for finding commonly used locations on the filesystem. ( null safety )
-  path_provider: ^2.0.1
+  path_provider: ^2.0.2
 
   # load local image ( null safety )
   flutter_svg: ^0.22.0
@@ -35,7 +35,7 @@ dependencies:
   basic_services: # bundle of services
     git:
       url: https://github.com/Hendi-arch/basic_services.git
-      ref: 43cb7a834b0c24d8f84e3f4d39c67486dd08cf98
+      ref: 1331af249a7e4d8970af4482f59fa6ae03b5c85b
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +55,7 @@ flutter:
   assets:
     - assets/json/
     - assets/images/
+    - assets/svg/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
